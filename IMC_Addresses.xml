@@ -215,6 +215,7 @@
   <address id="0x8801" name="ntnu-jetyak"/>
   <address id="0x8802" name="ntnu-remus"/>
   <address id="0x8803" name="ntnu-autonaut"/>
+  <address id="0x8804" name="ntnu-autonaut-L3"/>
   <address id="0x8901" name="ffi-hugin"/>
   <!-- Other Sensors (Self containing sensor systems) -->
   <address id="0x9001" name="ntnu-nest-01"/>
