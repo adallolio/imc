@@ -2843,6 +2843,7 @@
         Wind turbulence intensity.
       </description>
     </field>
+
   </message>
 
   <message id="272" name="Relative Humidity" abbrev="RelativeHumidity" source="vehicle" flags="periodic">
@@ -10805,6 +10806,49 @@
         OWL VHF: 0=ON, 1=OFF, 2=REBOOT.
       </description>
     </field>
+  </message>
+
+  <message id="913" name="Vessel Wind" abbrev="VesselWind" source="vehicle">
+    <description>
+      Measurement of wind speed and angle, in relation to the vessel’s bow/centerline.
+    </description>
+    <field name="Angle" abbrev="angle" type="fp32_t" unit="°">
+      <description>
+        Angle of the measured wind speed, 0.0 to 359.9 degrees, in relation to the vessel’s bow/centerline, to the nearest 0.1 degree.
+      </description>
+    </field>
+    <field name="Reference" abbrev="reference" type="plaintext">
+      <description>
+        Reference for the measurement (R=Relative, T=Theoretical).
+      </description>
+    </field>
+    <field name="Speed" abbrev="speed" type="fp32_t" unit="m/s">
+      <description>
+        The value of the wind speed as measured by the sensor.
+      </description>
+    </field>
+  </message>
+
+  <message id="914" name="Relative Wind" abbrev="RelativeWind" source="vehicle">
+    <description>
+      Measurement of relative wind speed and angle.
+    </description>
+    <field name="Angle" abbrev="angle" type="fp32_t" unit="°">
+      <description>
+        Angle of the measured wind speed, 0.0 to 180 degrees, left/right of the vessel’s heading, to the nearest 0.1 degree.
+      </description>
+    </field>
+    <field name="Direction" abbrev="direction" type="plaintext">
+      <description>
+        Direction for the measurement (L=Left, R=Right).
+      </description>
+    </field>
+    <field name="Speed" abbrev="speed" type="fp32_t" unit="m/s">
+      <description>
+        The value of the wind speed as measured by the sensor.
+      </description>
+    </field>
+
   </message>
   
 </messages>
