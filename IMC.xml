@@ -5357,6 +5357,17 @@
     </field>
   </message>
 
+  <message id="420" name="Peeked DesiredPath" abbrev="PeekDesiredPath">
+    <description>
+     A peek into the upcoming DesiredPath, to allow better decisions when completing maneuvers
+    </description>
+    <field name="DesiredPath" abbrev="dpath" type="message" message-type="DesiredPath">
+      <description>
+        The upcoming DesiredPath.
+      </description>
+    </field>
+  </message>
+
   <!-- Maneuvering -->
   <message id="450" name="Goto Maneuver" abbrev="Goto" source="ccu">
     <description>
@@ -7868,6 +7879,17 @@
     </field>
   </message>
 
+  <message id="497" name="Peeked Maneuver" abbrev="PeekManeuver">
+    <description>
+     A peek into the upcoming maneuver, to allow better decisions when completing maneuvers
+    </description>
+    <field name="Maneuver" abbrev="man" type="message" message-type="PlanManeuver">
+      <description>
+        The upcoming maneuver.
+      </description>
+    </field>
+  </message>
+
   <message id="499" name="Magnetometer Maneuver" abbrev="Magnetometer" source="ccu">
     <description>
       Magnetometer calibration maneuver (i.e: one square pattern
@@ -9547,7 +9569,7 @@
     </field>
   </message>
 
-  <message id="601" name="Remote Sensor Info" abbrev="RemoteSensorInfo" source="ccu">
+  <message id="601" name="Remote Sensor Info" abbrev="RemoteSensorInfo" source="ccu,vehicle">
     <description>
       Whenever the CUCS receives a message from one of the existing sensors (through SMS, ZigBee, Acoustic Comms, ...) it disseminates that info recurring to this message.
     </description>
