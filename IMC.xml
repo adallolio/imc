@@ -9569,7 +9569,7 @@
     </field>
   </message>
 
-  <message id="601" name="Remote Sensor Info" abbrev="RemoteSensorInfo" source="ccu,vehicle">
+  <message id="601" name="Remote Sensor Info" abbrev="RemoteSensorInfo" source="vehicle">
     <description>
       Whenever the CUCS receives a message from one of the existing sensors (through SMS, ZigBee, Acoustic Comms, ...) it disseminates that info recurring to this message.
     </description>
