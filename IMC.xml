@@ -10999,5 +10999,170 @@
     </field>
 
   </message>
+
+       <message id="910" name="Current Velocity" abbrev="CurrentVelocity" source="vehicle" flags="periodic" category="Sensors">
+    <description>
+      Current velocity at a given distance below the vehicle.
+    </description>
+    <field name="X" abbrev="x" type="fp32_t" unit="m/s">
+      <description>
+        X velocity component
+      </description>
+    </field>
+    <field name="Y" abbrev="y" type="fp32_t" unit="m/s">
+    <description>
+      Y velocity component
+    </description>
+    </field>
+    <field name="Z1" abbrev="z1" type="fp32_t" unit="m/s">
+      <description>
+        Z1 velocity component
+      </description>
+    </field>
+    <field name="Z2" abbrev="z2" type="fp32_t" unit="m/s">
+    <description>
+      Z2 velocity component
+    </description>
+    </field>
+  </message>
+
+  <message id="1011" name="Acoustic Backscatter" abbrev="AcousticBackscatter" source="vehicle" flags="periodic">
+    <description>
+      Amplitude of the acoustic backscatter for each beam. 
+    </description>
+    <field name="Beam 1" abbrev="beam1" type="fp32_t" unit="dB">
+      <description>
+        Amplitude of returning ping for beam 1
+    </description>
+    </field>
+    <field name="Beam 2" abbrev="beam2" type="fp32_t" unit="dB">
+      <description>
+        Amplitude of returning ping for beam 2
+      </description>
+    </field>
+    <field name="Beam 3" abbrev="beam3" type="fp32_t" unit="dB">
+      <description>
+        Amplitude of returning ping for beam 3
+      </description>
+    </field>
+    <field name="Beam 4" abbrev="beam4" type="fp32_t" unit="dB">
+      <description>
+        Amplitude of returning ping for beam 4
+      </description>
+    </field>
+  </message>
+
+  <message id="1012" name="Correlation" abbrev="Correlation" source="vehicle" flags="periodic" >
+    <description>
+      Correlation of a given beam mesurment relative to the other beam measurement
+    </description>
+    <field name="Beam 1" abbrev="beam1" type="uint8_t" unit="%" max="100" min="0">
+      <description>
+        Correlation of a given beam mesurment relative to the other beam measurements. 
+      </description>
+    </field>
+    <field name="Beam 2" abbrev="beam2" type="uint8_t" unit="%" max="100" min="0">
+      <description>
+        Correlation of a given beam mesurment relative to the other beam measurements. 
+      </description>
+    </field>
+    <field name="Beam 3" abbrev="beam3" type="uint8_t" unit="%" max="100" min="0">
+      <description>
+        Correlation of a given beam mesurment relative to the other beam measurements. 
+      </description>
+    </field>
+    <field name="Beam 4" abbrev="beam4" type="uint8_t" unit="%" max="100" min="0">
+      <description>
+        Correlation of a given beam mesurment relative to the other beam measurements. 
+      </description>
+   </field>
+  </message>
+
+  <message id="1014" name="Current Profile Cell" abbrev="CurrentProfileCell" source="vehicle" flags="periodic">
+    <description>
+      Raw Current measurement at CellPosition along the Z-axis in the ADCP sensor frame.
+    </description>
+    <field name="Cell Position" abbrev="CellPosition" unit="fp32_t" type="uint8_t" prefix="conf">
+      <description>
+        Distance of each measurment cell along the Z-axis in the sensor frame.
+      </description>
+      <value id="0x01" abbrev="tbd" name="tbd"/>
+      <value id="0x02" abbrev="tbd1" name="tbd1"/>
+      <value id="0x04" abbrev="tbd2" name="tbd2"/>
+      <value id="0x08" abbrev="tbd3" name="tbd3"/>
+    </field>
+    <field name="Vel X" abbrev="x" type="fp32_t" unit="m/s">
+      <description>
+        X velocity component
+      </description>
+    </field>
+    <field name="Vel Y" abbrev="y" type="fp32_t" unit="m/s">
+      <description>
+        Y velocity component
+      </description>
+    </field>
+    <field name="Vel Z1" abbrev="z1" type="fp32_t" unit="m/s">
+      <description>
+        Z1 velocity component
+      </description>
+    </field>
+    <field name="Vel Z2" abbrev="z2" type="fp32_t" unit="m/s">
+      <description>
+        Z2 velocity component
+      </description>
+    </field>
+    <field name="Amp 0" abbrev="amp0" type="fp32_t" unit="dB">
+      <description>
+        Amplitude of returning ping for beam 0
+      </description>
+    </field>
+    <field name="Amp 1" abbrev="amp1" type="fp32_t" unit="dB">
+      <description>
+        Amplitude of returning ping for beam 1
+      </description>
+    </field>
+    <field name="Amp 2" abbrev="amp2" type="fp32_t" unit="dB">
+      <description>
+        Amplitude of returning ping for beam 2
+      </description>
+    </field>
+    <field name="Amp 3" abbrev="amp3" type="fp32_t" unit="dB">
+      <description>
+        Amplitude of returning ping for beam 3
+      </description>
+    </field>
+    <field name="Cor 0" abbrev="cor0" type="uint8_t" unit="%" max="100" min="0">
+      <description>
+        Correlation of a given beam measurement relative to the other beam measurements.
+      </description>
+    </field>
+    <field name="Cor 1" abbrev="cor1" type="uint8_t" unit="%" max="100" min="0">
+      <description>
+        Correlation of a given beam measurement relative to the other beam measurements.
+      </description>
+    </field>
+    <field name="Cor 2" abbrev="cor2" type="uint8_t" unit="%" max="100" min="0">
+      <description>
+        Correlation of a given beam measurement relative to the other beam measurements.
+      </description>
+    </field>
+    <field name="Cor 3" abbrev="cor3" type="uint8_t" unit="%" max="100" min="0">
+      <description>
+        Correlation of a given beam measurement relative to the other beam measurements.
+      </description>
+    </field>
+  </message>
+
+  <message id="1015" name="Current Profile" abbrev="CurrentProfile" source="vehicle" flags="periodic">
+    <description>
+      Raw Current Profile along the Z-axis of the sensor frame. Contains velocity of water
+      relative to the vehicle velocity represented in the sensor coordinate frame.
+    </description>
+    <field name="Current Profile" abbrev="CurrentProfile" type="message-list" message-type="CurrentProfileCell">
+      <description>
+        List of current profile measurement cells.
+      </description>
+    </field>
+  </message>
   
 </messages>
