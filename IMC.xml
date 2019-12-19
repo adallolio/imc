@@ -4694,11 +4694,6 @@
         Indicates the units used for the speed value.
       </description>
     </field>
-    <field name="Speed Offset" abbrev="off" type="fp32_t" unit="m/s">
-      <description>
-        Speed offset computed by sb_mpc.
-      </description>
-    </field>
   </message>
 
   <message id="403" name="Desired Roll" abbrev="DesiredRoll" source="vehicle">
